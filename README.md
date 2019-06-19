@@ -12,6 +12,7 @@
 2. queryset.order_by_values(field_name, values)
 
 ## 例子
+
 ### model
 ```
 from django.db import models 
@@ -19,12 +20,12 @@ from django.db import models
 class User(models.Model):
     name = models.CharField(max_length=255, db_index=True)
 ```
-###按照指定名字顺序排序
+### 按照指定名字顺序排序
 ```
 User.objects.all().order_by_values('name', ['Alice', Bob', 'Eve'])
 ```
 
-###此查询经过orm层的转换成的sql语句为
+### 此查询经过orm层的转换成的sql语句为
 
 ```
 SELECT 
