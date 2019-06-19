@@ -30,5 +30,5 @@ User.objects.all().order_by_values('name', ['Alice', Bob', 'Eve'])
 ```
 SELECT 
     (Field(name, "Bob", "Eve", "Alice")) AS "ordering_values", "id", "name" 
-    ORDER BY "ordering_values" ASC;
+ORDER BY "ordering_values" ASC;
 ```
